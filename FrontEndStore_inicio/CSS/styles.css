@@ -1,0 +1,423 @@
+:root {
+    --primario: #050303;
+    --primarioOscuro: #d7e0ed;
+    --Secundario: #fefefe;
+    --SecuandarioOscuro: rgb(233,387,2);
+    --blanco: #1ac731;
+    --negro: #000000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  
+}
+/** Globales **/
+
+body {
+ background-color: var(--primario);
+ font-size: 1,6rem;
+ line-height: 1.5;
+background-image: linear-gradient(to top, #0f0f39 0%, var(--primarioOscuro) 100%);
+}
+
+p {
+
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+
+a {
+
+  text-decoration: none;
+}
+
+img{
+
+  max-width: 100%;
+}
+.contenedor{
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  
+  text-align: center;
+  color: var(--Secundario);
+  font-family: var(--fuentePrincipal);
+  
+  
+}
+
+h1 {
+
+  font-size: 4rem;
+
+  
+}
+
+span{
+
+  color: var(--Secundario);
+ 
+}
+.negro{
+
+  color: #000000;
+}
+
+h2{ 
+  font-size: 3.2rem;
+}
+
+h3 {
+
+  font-size: 2,4rem;
+}
+
+
+/** Header **/
+
+
+.header{
+
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo{
+
+  margin: 3rem 0;
+}
+
+.contenido{
+  background-image: url(../FrontEndStore_inicio/img/portada.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+ height: 300px;
+ padding: 100px;
+ position: relative;
+}
+
+.contenido-logo{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.centradoTitulo{
+
+margin-bottom: 30px;
+margin-top: 30px;
+}
+/** carrousel**/
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin-top: 30px;
+  color: #fff;
+margin-bottom: -3rem;
+
+}
+
+
+.carrusel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0px;
+ 
+}
+
+.carrusel-item {
+  min-width: 300px;
+  max-width: 300px;
+  height: 750px;
+  outline: 2px solid black;
+  cursor: pointer;
+
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.carrusel-item:hover {
+  transform: scale(1.2);
+  
+}
+
+/** Footer **/
+
+.footer{
+
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+
+.footer__texto{
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  font-size: 1rem;
+}
+
+/** Navegacion **/
+
+.navegacion{
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navegacion__enlace{
+font-family: var(--fuentePrincipal);
+color:var(--blanco);
+font-size: 3rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: var(--Secundario);
+}
+
+/** Grid **/
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/** Productos **/
+.producto{
+background-color: var(--primarioOscuro);
+padding: 1rem;
+border-radius: 2rem;
+}
+
+.producto__imagen{
+width: 100%;
+border-radius: 1rem;
+}
+
+.producto__informacion{
+font-size: 4rem;
+
+}
+
+
+.producto__precio{
+font-size: 2.8rem;
+color: var(--Secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+
+  font-family: var(--fuentePrincipal);
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 2rem;
+}
+
+/** Grafico Camisas **/
+.grafico{
+min-height: 30rem;
+background-repeat: no-repeat;
+background-size: cover;
+grid-column: 1 / 3;
+border-radius: 2rem;
+}
+
+.grafico--camisas{
+grid-row: 3 / 3;
+background-image: url(../FrontEndStore_inicio/img/grafico\ 1.jpg);
+}
+
+.grafico--node{
+
+  background-image: url(../FrontEndStore_inicio/img/grafico\ 2.jpg);
+  grid-row: 8 \ 9;
+}
+
+@media (min-width: 768px) {
+  .grafico--node{
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+  
+  }
+
+  /** Grafico Pantalones **/
+
+  .graficop{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+    border-radius: 2rem;
+    }
+}
+
+.graficop--camisasp{
+  grid-row: 3 / 3;
+  background-image: url(../FrontEndStore_inicio/Pantalones/graficoPantalon1.jpg);
+  }
+  
+  .graficop--nodep{
+  
+    background-image: url(../FrontEndStore_inicio/Pantalones/graficoPantalon2.webp);
+    grid-row: 8 \ 9;
+  }
+
+@media (min-width: 768px) {
+  .graficop--nodep{
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+  
+  }
+}
+
+/** Grafico zapatos **/
+.graficoz{
+  min-height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1 / 3;
+  border-radius: 2rem;
+  }
+
+
+.graficoz--camisasz{
+grid-row: 3 / 3;
+background-image: url(../FrontEndStore_inicio/zapatos/graficos/grafico1.jpg);
+}
+
+.graficoz--nodez{
+
+  background-image: url(../FrontEndStore_inicio/zapatos/graficos/grafico2.jpg);
+  grid-row: 8 \ 9;
+}
+
+@media (min-width: 768px) {
+.graficoz--nodez{
+  grid-row: 5 / 6;
+  grid-column: 2 / 4;
+
+}
+}
+
+/** Contacto **/
+h1{
+  font-family: var(--fuentePrincipal);
+  border-radius: 1rem;
+  background-color: #72977638;
+}
+
+.formulario{
+background-color: #5e5e05;
+width: min(60rem, 100%); /** valor mas pequeno **/
+margin: 0 auto;
+padding: 2rem;
+border-radius: 1rem;
+}
+
+.formulario fieldset{
+
+  border: none;
+}
+
+.formulario legend{
+
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #FFCE00;
+}
+
+.contenedor-campos{
+
+
+}
+
+.campo{
+margin-bottom: 1rem;
+
+}
+
+.campo label{
+color: #fff;
+font-weight: bold;
+margin-bottom: 1rem;
+display: block;
+
+}
+
+.input-text{
+
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+.boton{
+
+  background-color: #3ea82fe8;
+  color: var(--blanco);
+  padding: .5rem 5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+
+.boton:hover{
+  cursor: pointer;
+}
+
+.enviar .boton{
+  width: 103%;
+}
+
+
